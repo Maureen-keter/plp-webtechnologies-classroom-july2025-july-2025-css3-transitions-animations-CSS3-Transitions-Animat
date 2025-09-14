@@ -1,0 +1,64 @@
+/* ===============================
+   Global Styles
+================================= */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #253458;
+  color: white;
+  padding: 20px;
+}
+
+main {
+  margin: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #3498db;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* Transition for hover effect */
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* ===============================
+   Box Animation Styles
+================================= */
+#box {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin: 50px auto;
+  border-radius: 10px;
+
+  /* Transition for smooth background color change */
+  transition: background-color 0.6s ease;
+}
+
+/* Keyframe animation for movement */
+@keyframes moveBox {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-150px); background-color: gold; }
+  100% { transform: translateY(0); background-color: tomato; }
+}
+
+/* Class added dynamically with JavaScript */
+.animate {
+  animation: moveBox 2s ease-in-out forwards;
+}
